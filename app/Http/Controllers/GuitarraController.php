@@ -13,7 +13,7 @@ class GuitarraController extends Controller
 {
     public function CadastroGuitarra()
     {
-        
+
         return view('cadastrarGuitarra');
     }
 
@@ -45,8 +45,41 @@ class GuitarraController extends Controller
 
 
 
-        
+
         Guitarra::create($dadosGuitarra);
         return Redirect::route('home');
+    }
+
+
+    public function ApagarBancoGuitarra(Guitarra $registrosGuitarras)
+    {
+
+        $registrosGuitarras->delete();
+        //Guitarra::findOrFail($id)->delete();
+        //$guitarra->delete();
+
+        return Redirect::route('editar-guitarra');
+    }
+
+
+    public function AlterarGuitarra(Guitarra $registrosGuitarras)
+    {
+        return view('alterarGuitarra', ['registrosGuitarras' => $registrosGuitarras]);
+    }
+
+    public function AlterarBancoGuitarra(Guitarra $registrosGuitarras, Request $request)
+    {
+        $banco = $request->validate([
+            'modelo' => 'string|required',
+            'marca' => 'string|required',
+            'ano' => 'string|required',
+            'cor' => 'string|required',
+            'valor' => 'string|required'
+        ]);
+
+        $registrosGuitarras->fill($banco);
+        $registrosGuitarras->save();
+
+        return Redirect::route('editar-guitarra');
     }
 }

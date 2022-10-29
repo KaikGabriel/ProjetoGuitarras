@@ -44,7 +44,7 @@
     <section class="bgCadastro">
         <div class="container my-5">
             <h2>Lista de Produtos Cadastrados</h2>
-            <a class="btn btn-primary" href="cadastrar" role="button">Cadastrar</a>
+            <a class="btn btn-primary" href="{{'cadastrar-guitarra'}}" role="button">Cadastrar</a>
             <br>
             <table class="table text-white">
                 <thead>
@@ -63,10 +63,12 @@
                         <td>{{$registrosGuitarras->marca}}</td>
                         <td>{{$registrosGuitarras->valor}}</td>
                         <td>
-                            <a class="btn btn-primary btn-sm" href="#">Editar</a>
-                            <a class="btn btn-primary btn-sm" href="#">Excluir</a>
-                            @method('delete')
-                            @csrf
+
+                            <a class="btn btn-primary btn-sm" href="{{route('alterar-guitarra',$registrosGuitarras->id)}}">Editar</a>
+                            <form method="Post" Action="{{route('apagar-guitarra',$registrosGuitarras->id)}}">
+                                @method('delete')
+                                @csrf
+                                <input class="btn btn-primary btn-sm" type="submit" value="Excluir">
                         </td>
                     </tr>
                     @endforeach

@@ -19,8 +19,14 @@ use App\Models\Guitarra;
 
 
 
-Route::get('/',[HomeController::class,'MostrarHome'])->name('home');
+Route::get('/', [HomeController::class, 'MostrarHome'])->name('home');
 
 Route::get('/editar-guitarra', [GuitarraController::class, 'EditarGuitarra'])->name('editar-guitarra');
 Route::get('/cadastrar-guitarra', [GuitarraController::class, 'CadastroGuitarra'])->name('cadastrar-guitarra');
 Route::post('/cadastrar-guitarra', [GuitarraController::class, 'SalvarBancoGuitarra'])->name('salvar-banco');
+Route::delete('/editar-guitarra/{registrosGuitarras}', [GuitarraController::class, 'ApagarBancoGuitarra'])->name('apagar-guitarra');
+
+
+//editar
+Route::get('/alterar-guitarra/{registrosGuitarras}', [GuitarraController::class, 'AlterarGuitarra'])->name('alterar-guitarra');
+Route::put('/editar-guitarra/{registrosGuitarras}', [GuitarraController::class, 'AlterarBancoGuitarra'])->name('alterar-banco-guitarra');
