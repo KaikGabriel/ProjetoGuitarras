@@ -32,13 +32,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#produtos">Produtos</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{'editar-guitarra'}}">Lista</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Lista
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{'editar-guitarra'}}">Guitarras</a></li>
+                                <li><a class="dropdown-item" href="{{'editar-baixo'}}">Baixos</a></li>
+                                <li><a class="dropdown-item" href="{{'editar-bateria'}}">Baterias</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{'cadastrar-guitarra'}}">Cadastrar Produtos</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </nav>
@@ -500,7 +503,7 @@
                         <div class="text-center border border-white deal-of-the-day py5">
                             <h2>PROMOÇÃO DO MÊS!</h2>
                             <h4>60% DE DESCONTO!</h4>
-                            <p>Se caso Jair (Capitão) Messias Bolsonaro (Mito) se reeleger loja com 60% de desconto!!!
+                            <p>Neste mês de Novembro!
                             </p>
                             </p>
                         </div>

@@ -47,8 +47,8 @@
 
     <section class="bgCadastro">
         <div class="container my-5">
-            <h2>Lista de Guitarras Cadastrados</h2>
-            <a class="btn btn-primary" href="{{'cadastrar-guitarra'}}" role="button">Cadastrar</a>
+            <h2>Lista de Baixos Cadastrados</h2>
+            <a class="btn btn-primary" href="{{'cadastrar-baixo'}}" role="button">Cadastrar</a>
             <br>
             <table class="table text-white">
                 <thead>
@@ -60,16 +60,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($registrosGuitarra as $registrosGuitarras)
+                    @foreach($registrosBaixo as $registrosBaixos)
                     <tr>
-                        <th>{{$registrosGuitarras->id}}</th>
-                        <td>{{$registrosGuitarras->modelo}}</td>
-                        <td>{{$registrosGuitarras->marca}}</td>
-                        <td>{{$registrosGuitarras->valor}}</td>
+                        <th>{{$registrosBaixos->id}}</th>
+                        <td>{{$registrosBaixos->modelo}}</td>
+                        <td>{{$registrosBaixos->marca}}</td>
+                        <td>{{$registrosBaixos->valor}}</td>
                         <td>
 
-                            <a class="btn btn-primary btn-sm" href="{{route('alterar-guitarra',$registrosGuitarras->id)}}">Editar</a>
-                            <form method="Post" Action="{{route('apagar-guitarra',$registrosGuitarras->id)}}">
+                            <a class="btn btn-primary btn-sm" href="{{route('alterar-baixo',$registrosBaixos->id)}}">Editar</a>
+                            <form method="Post" Action="{{route('apagar-baixo',$registrosBaixos->id)}}">
                                 @method('delete')
                                 @csrf
                                 <input class="btn btn-primary btn-sm" type="submit" value="Excluir">

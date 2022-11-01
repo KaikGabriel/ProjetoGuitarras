@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <title>Cadastrar</title>
+    <title>Atualizar Baixo</title>
 </head>
 
 <body>
@@ -44,19 +44,17 @@
     </header>
     <!--  NAVBAR  -->
 
-
-
     <section class="cadastro">
         <div class="background">
             <div class="container my-5">
-                <h2>Cadastrar Produto</h2>
-                <form class="form" method="post" action="{{route('alterar-banco-guitarra',$registrosGuitarras->id)}}">
+                <h2>Atualizar Produto</h2>
+                <form class="form" method="post" action="{{route('alterar-banco-baixo',$registrosBaixos->id)}}">
                     @csrf
                     @method('put')
                     <div class="row mb-3 align-items-center">
                         <label class="col-sm-3 col-form-label">Modelo:</label>
                         <div class="col-sm-6">
-                            <input type="text" name="modelo" value="{{old('modelo',$registrosGuitarras->modelo)}}" class="form-control" id="inputModelo" placeholder="Jaguar">
+                            <input type="text" name="modelo" value="{{old('modelo',$registrosBaixos->modelo)}}" class="form-control" id="inputModelo" placeholder="Baixolão">
                             @error('modelo')
                             <div class="text-light">*Preencher o campo modelo.</div>
                             @enderror
@@ -65,7 +63,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-3 col-form-label">Marca:</label>
                         <div class="col-sm-6">
-                            <input type="text" name="marca" value="{{old('marca',$registrosGuitarras->marca)}}" class="form-control" id="inputMarca" placeholder="Fender">
+                            <input type="text" name="marca" value="{{old('marca',$registrosBaixos->marca)}}" class="form-control" id="inputMarca" placeholder="Gibson">
                             @error('marca')
                             <div class="text-light">*Preencher o campo marca.</div>
                             @enderror
@@ -75,7 +73,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-3 col-form-label">Ano:</label>
                         <div class="col-sm-6">
-                            <input type="text" name="ano" value="{{old('ano',$registrosGuitarras->ano)}}" class="form-control" id="inputAno" placeholder="2022">
+                            <input type="text" name="ano" value="{{old('ano',$registrosBaixos->ano)}}" class="form-control" id="inputAno" placeholder="2002">
                             @error('ano')
                             <div class="text-light">*Preencher o campo ano.</div>
                             @enderror
@@ -85,7 +83,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-3 col-form-label">Cor:</label>
                         <div class="col-sm-6">
-                            <input type="text" name="cor" value="{{old('cor',$registrosGuitarras->cor)}}" class="form-control" id="inputCor" placeholder="Preta">
+                            <input type="text" name="cor" value="{{old('cor',$registrosBaixos->cor)}}" class="form-control" id="inputCor" placeholder="Azul">
                             @error('cor')
                             <div class="text-light">*Preencher o campo cor.</div>
                             @enderror
@@ -94,7 +92,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-3 col-form-label">Valor:</label>
                             <div class="col-sm-6">
-                                <input type="text" name="valor" value="{{old('valor',$registrosGuitarras->valor)}}" class="form-control" id="inputValor" placeholder="R$ 12,000,00">
+                                <input type="text" name="valor" value="{{old('valor',$registrosBaixos->valor)}}" class="form-control" id="inputValor" placeholder="R$ 8,000,00">
                                 @error('valor')
                                 <div class="text-light">*Preencher o campo valor.</div>
                                 @enderror
@@ -121,7 +119,6 @@
 
 
 
-    
 
 
     <!--------------------------------JS------------------------>

@@ -46,24 +46,26 @@
     </header>
     <!--  NAVBAR  -->
 
+
+
     <section>
         <div class="container">
-            <div class="title">Registrar Guitarra</div>
+            <div class="title">Registrar Bateria</div>
             <div class="content">
-                <form class="form" method="post" action="{{route('salvar-banco')}}">
+                <form class="form" method="post" action="{{route('salvar-banco-bateria')}}">
                     @csrf
                     <div class="user-details">
                         <div class="input-box">
                             <span class="details">Modelo</span>
-                            <input type="text" name="modelo" value="{{old('modelo')}}" class="form-control" id="inputModelo" placeholder="Jaguar" required>
+                            <input type="text" name="modelo" value="{{old('modelo')}}" class="form-control" id="inputModelo" placeholder="Acústica" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Marca</span>
-                            <input type="text" name="marca" value="{{old('marca')}}" class="form-control" id="inputMarca" placeholder="Fender" required>
+                            <input type="text" name="marca" value="{{old('marca')}}" class="form-control" id="inputMarca" placeholder="Yamaha" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Ano</span>
-                            <input type="text" name="ano" value="{{old('ano')}}" class="form-control" id="inputAno" placeholder="2022" required>
+                            <input type="text" name="ano" value="{{old('ano')}}" class="form-control" id="inputAno" placeholder="2015" required>
                         </div>
                         <div class="input-box">
                             <span class="details">Cor</span>
@@ -84,77 +86,6 @@
             </div>
         </div>
     </section>
-
-
-    <!-- <section class="cadastro">
-        <div class="background">
-            <div class="container my-5">
-                <h2>Cadastrar Produto</h2>
-                <form class="form" method="post" action="{{route('salvar-banco')}}">
-                    @csrf
-                    <div class="row mb-3 align-items-center">
-                        <label class="col-sm-3 col-form-label">Modelo:</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="modelo" value="{{old('modelo')}}" class="form-control" id="inputModelo" placeholder="Jaguar">
-                            @error('modelo')
-                            <div class="text-light">*Preencher o campo modelo.</div>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-3 col-form-label">Marca:</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="marca" value="{{old('marca')}}" class="form-control" id="inputMarca" placeholder="Fender">
-                            @error('marca')
-                            <div class="text-light">*Preencher o campo marca.</div>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label class="col-sm-3 col-form-label">Ano:</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="ano" value="{{old('ano')}}" class="form-control" id="inputAno" placeholder="2022">
-                            @error('ano')
-                            <div class="text-light">*Preencher o campo ano.</div>
-                            @enderror
-                        </div>
-                    </div>
-
-                    <div class="row mb-3">
-                        <label class="col-sm-3 col-form-label">Cor:</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="cor" value="{{old('cor')}}" class="form-control" id="inputCor" placeholder="Preta">
-                            @error('cor')
-                            <div class="text-light">*Preencher o campo cor.</div>
-                            @enderror
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-sm-3 col-form-label">Valor:</label>
-                            <div class="col-sm-6">
-                                <input type="text" name="valor" value="{{old('valor')}}" class="form-control" id="inputValor" placeholder="R$ 12,000,00">
-                                @error('valor')
-                                <div class="text-light">*Preencher o campo valor.</div>
-                                @enderror
-                            </div>
-                        </div>
-
-
-                        <div class="d-grid gap-2 col-6 p-3 mx-auto">
-                            <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        </div>
-                </form>
-            </div>
-        </div>
-        </section>
--->
-
-
-
-
-
-
 
 
 

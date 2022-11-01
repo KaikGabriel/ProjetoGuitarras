@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik&display=swap");
 
 *,
 *:after *:before {
@@ -14,8 +14,6 @@ header {
     z-index: 10;
     width: 100%;
 }
-
-
 
 :active,
 :hover,
@@ -54,7 +52,6 @@ html {
 body {
     font-size: 100%;
     font-weight: 400;
-
 }
 
 /* Scrollbar */
@@ -94,7 +91,7 @@ h4 {
     font-size: 1.125rem;
     font-weight: 400;
     margin-bottom: 0.9375rem;
-    transition: all .3s linear;
+    transition: all 0.3s linear;
 }
 
 h5 {
@@ -130,13 +127,13 @@ p {
 .main-btn::before {
     position: absolute;
     top: 50%;
-    background-color: rgb(255, 255, 255, .3);
+    background-color: rgb(255, 255, 255, 0.3);
     left: 0;
     width: 100%;
     height: 1px;
     content: "";
-    transition: all .5s ease-out 0s;
-    -webkit-transition: all .5s ease-out 0s;
+    transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
     transform: translateY(-20px);
     -webkit-transform: translateY(-20px);
 }
@@ -178,10 +175,9 @@ p {
 .navbar-brand {
     font-weight: bold;
     font-size: 2rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #ccc !important;
 }
-
 
 .nav-item {
     font-weight: 600;
@@ -189,20 +185,32 @@ p {
     padding-left: 50px;
 }
 
-
 .nav-link {
     letter-spacing: 2px;
     font-size: 1em;
     font-weight: 700;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     text-transform: uppercase;
+}
+
+.dropdown-menu {
+    letter-spacing: 2px;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: "Rubik", sans-serif;
+    text-transform: uppercase;
+}
+
+.dropdown-item {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 50px;
 }
 
 .nav-link:hover {
     border-radius: 5px;
     transition: all 0.6s ease 0s;
 }
-
 
 /**************************** NAVBAR ****************************/
 
@@ -241,7 +249,7 @@ p {
 
 .cards .card-banner .card-thumb img,
 .products .item-product img {
-    transition: all .5 ease-out 0s;
+    transition: all 0.5 ease-out 0s;
 }
 
 .cards .card-banner .card-thumb img:hover,
@@ -249,8 +257,6 @@ p {
     transform: scale(1.2);
     opacity: 0.6;
 }
-
-
 
 .products .wrapper {
     background: var(--black-color);
@@ -297,7 +303,7 @@ p {
 }
 
 .basket a i {
-    color: var(--white-color)
+    color: var(--white-color);
 }
 
 .deal-of-the-day {
@@ -310,15 +316,12 @@ p {
 .footer {
     background-color: var(--white-color);
     padding: 30px;
-
 }
 
 .bgCadastro {
     background-color: var(--secondry-color);
     min-height: 100vh;
-
 }
-
 
 .cadastro {
     color: var(--white-color);
@@ -331,7 +334,7 @@ p {
     height: 100vh;
 }
 
-.cadastrarteste{
+.cadastrarteste {
     min-height: 100vh;
     padding-top: 5%;
 }
